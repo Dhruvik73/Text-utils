@@ -70,8 +70,8 @@ export default function Textform(props){
 </div>
 <div className='container my-3'>
     <h2> your word counter</h2>
-    <p>number of words is {text.split(" ").length-1} and number of characters is {text.length}</p>
-    <p>you need {0.008 * (text.split(" ").length-1)} minutes to read this above text</p>
+    <p>number of words is {text.split(" ").filter((element)=>{return element.length>0}).length} and number of characters is {text.length}</p>
+    <p>you need {0.008 * (text.split(" ").filter((element)=>{return element.length>0}).length)} minutes to read this above text</p>
     <h3>preview</h3>
     <p>{text===''?'enter some text to view the preview':text}</p>
 </div>
